@@ -330,12 +330,13 @@
 	
 	\section{Matrices comparativas}
 	
-	\subsection{Escenario 1}
+	\subsection{Escenario 1. Extractora de aceite de palma}
 	
 	\matriz
 	
-	\subsection{Escenario 2}
+	\subsection{Escenario 2. Aplicación móvil de pedidos}
 	
+	\noindent\begin{minipage}{\textwidth}
 	\begin{center}
 		\textbf{Matriz comparativa del escenario 2: aplicación móvil de pedidos}
 	\end{center}
@@ -372,12 +373,80 @@
 		\textbf{4/5}. Permite mantener documentación actualizada durante los incrementos del sistema. &
 		\textbf{3/5}. Prioriza el software funcional, por lo que se debe establecer expresamente la documentación y los controles de privacidad y seguridad necesarios. \\ \hline
 	\end{tabularx}
+	\end{minipage}\par
 	
-	\subsection{Escenario 3}
+	\clearpage
+	\subsection{Escenario 3. Sistema de trámites municipales}
+
+	\begin{longtable}{|p{2.6cm}|*{3}{>{\raggedright\arraybackslash}p{\dimexpr(\textwidth-2.6cm-8\tabcolsep-5\arrayrulewidth)/3\relax}|}}
+		\hline
+		\textbf{Criterio} &
+		\textbf{Secuencial (cascada)} &
+		\textbf{Iterativo e incremental} &
+		\textbf{Ágil} \\ \hline
+		\endfirsthead
+		\hline
+		\textbf{Criterio} &
+		\textbf{Secuencial (cascada)} &
+		\textbf{Iterativo e incremental} &
+		\textbf{Ágil} \\ \hline
+		\endhead
+		K1. Estabilidad y cambios &
+		\textbf{2/5.} La aprobación de patentes ya cambió dos veces y las tasas podrían
+		cambiar en el mes 4. Para entonces los requisitos ya estarían aprobados, así que
+		tocaría revisar lo acordado y rehacer parte del trabajo. &
+		\textbf{4/5.} Se puede revisar el flujo de patentes en cada ciclo y ajustar
+		el cálculo si la ordenanza se aprueba en el mes 4. El alcance aprobado
+		sigue sujeto al contrato. &
+		\textbf{4/5.} Los ciclos cortos permiten probar los cambios de patentes
+		y dar prioridad a las nuevas tasas si se aprueban. Los cambios que
+		aumenten el costo requieren un trámite formal. \\ \hline
+		K2. Partes interesadas y disponibilidad &
+		\textbf{3/5.} La reunión semanal con el administrador permite programar las
+		revisiones. Como los técnicos y la jefa de rentas solo participan cuando él los
+		convoca, pueden quedar dudas sobre los trámites antes de aprobar los requisitos
+		en el mes 2. &
+		\textbf{4/5.} Las revisiones de cada avance se pueden coordinar en la
+		reunión semanal con el administrador. Él puede convocar a la jefa
+		de rentas para revisar las patentes. &
+		\textbf{2/5.} El administrador es el único contacto oficial y se reúne
+		una vez por semana. Si los técnicos solo participan por convocatoria,
+		algunas dudas pueden quedar abiertas entre ciclos. \\ \hline
+		K3. Tipo de sistema y criticidad &
+		\textbf{4/5.} El sistema web maneja datos personales y cobra tasas. La fase de
+		pruebas permite revisar los cálculos y quién puede consultar los datos antes de
+		entregar el sistema. &
+		\textbf{5/5.} Cada avance permite probar los cobros y el acceso a datos
+		personales antes de sumar más trámites. Así se pueden detectar errores
+		que afectarían al dinero público. &
+		\textbf{4/5.} Las pruebas en cada ciclo ayudan a detectar errores en
+		los cobros y en el acceso a datos personales. El equipo debe guardar
+		los resultados para la entrega del mes 6. \\ \hline
+		K4. Riesgo principal &
+		\textbf{2/5.} La base de datos de los predios es antigua y no está documentada.
+		Si el equipo espera hasta las pruebas finales para comprobar que puede leerla,
+		un problema de conexión o de datos podría retrasar la entrega del mes 6 y
+		generar multas. &
+		\textbf{5/5.} Un primer avance puede probar la lectura de la base
+		antigua desde los servidores del municipio. Así se detectan problemas
+		con tiempo para atenderlos antes de la entrega del mes 6. &
+		\textbf{4/5.} Un ciclo corto al inicio permite probar la lectura de
+		la base sin documentación. El equipo puede ajustar sus prioridades
+		si descubre problemas antes de la entrega del mes 6. \\ \hline
+		K5. Documentación y marco normativo o contractual &
+		\textbf{5/5.} El trabajo por fases encaja con los entregables y pagos fijados
+		para los meses 2, 6 y 7. Los requisitos aprobados en el mes 2 sirven como base
+		para documentar los cambios de alcance que aumenten el costo y requieran un
+		trámite formal. &
+		\textbf{4/5.} Se pueden revisar los avances entre las entregas de los
+		meses 2, 6 y 7. Cada ciclo debe mantener al día los requisitos
+		aprobados y los resultados de las pruebas para la entrega del mes 6. &
+		\textbf{2/5.} El contrato exige aprobar los requisitos en el mes 2.
+		Cambiar prioridades en un ciclo resulta útil, pero si el cambio
+		aumenta el costo, el equipo debe esperar el trámite formal. \\ \hline
+	\end{longtable}
 	
-	\matriz
-	
-	\subsection{Escenario 4}
+	\subsection{Escenario 4. Plataforma para cooperativa de cacao}
 	
 	\matriz
 	
@@ -385,11 +454,11 @@
 	
 	\section{Justificación de los modelos seleccionados}
 	
-	\subsection{Escenario 1}
+	\subsection{Escenario 1. Extractora de aceite de palma}
 	
 	\justificacion
 	
-	\subsection{Escenario 2}
+	\subsection{Escenario 2. Aplicación móvil de pedidos}
 	
 	\begin{tabularx}{\textwidth}{|p{4.5cm}|Y|}
 		\hline
@@ -414,11 +483,11 @@
 		La principal tensión es equilibrar la flexibilidad para aceptar cambios con el presupuesto limitado y el plazo de 14 semanas. Para controlarla, se debe priorizar un MVP y evaluar el impacto de cada cambio antes de incorporarlo. \\ \hline
 	\end{tabularx}
 	
-	\subsection{Escenario 3}
+	\subsection{Escenario 3. Sistema de trámites municipales}
 	
 	\justificacion
 	
-	\subsection{Escenario 4}
+	\subsection{Escenario 4. Plataforma para cooperativa de cacao}
 	
 	\justificacion
 	
@@ -426,11 +495,11 @@
 	
 	\section{Riesgos y mitigaciones}
 	
-	\subsection{Escenario 1}
+	\subsection{Escenario 1. Extractora de aceite de palma}
 	
 	\riesgos
 	
-	\subsection{Escenario 2}
+	\subsection{Escenario 2. Aplicación móvil de pedidos}
 	
 	\begin{tabularx}{\textwidth}{|p{1.5cm}|Y|Y|}
 		\hline
@@ -447,11 +516,11 @@
 		Realizar pruebas funcionales en cada iteración, establecer criterios de aceptación, validar los procesos de pedidos y pagos, y aplicar controles de privacidad y seguridad desde el diseño. \\ \hline
 	\end{tabularx}
 	
-	\subsection{Escenario 3}
+	\subsection{Escenario 3. Sistema de trámites municipales}
 	
 	\riesgos
 	
-	\subsection{Escenario 4}
+	\subsection{Escenario 4. Plataforma para cooperativa de cacao}
 	
 	\riesgos
 	
