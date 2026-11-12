@@ -64,7 +64,6 @@
 		\textbf{Secuencial (cascada)} &
 		\textbf{Iterativo e incremental} &
 		\textbf{Ágil} \\ \hline
-		
 		K1. Estabilidad y cambios & & & \\[2cm] \hline
 		K2. Partes interesadas y disponibilidad & & & \\[2cm] \hline
 		K3. Tipo de sistema y criticidad & & & \\[2cm] \hline
@@ -100,7 +99,7 @@
 \begin{document}
 	
 	% ------------------------------------------------
-	% CARÁTULA
+	% CARÁTULA ORIGINAL
 	% ------------------------------------------------
 	
 	\begin{titlepage}
@@ -192,11 +191,7 @@
 	
 	\subsection{Objetivos específicos}
 	
-	\begin{itemize}
-		\item
-		\item
-		\item
-	\end{itemize}
+	% Escribir los objetivos específicos.
 	
 	% ==================== 3 ====================
 	
@@ -206,27 +201,39 @@
 	
 	\begin{tabularx}{\textwidth}{|p{3.5cm}|Y|}
 		\hline
-		Fases & \\[1.3cm] \hline
-		Supuestos & \\[1.3cm] \hline
-		Condiciones de uso & \\[1.3cm] \hline
+		\textbf{Elemento} & \textbf{Descripción} \\ \hline
+		Fases &
+		Se desarrolla mediante etapas ordenadas: levantamiento y análisis de requisitos, diseño, implementación, pruebas, despliegue y mantenimiento. Cada fase se completa antes de avanzar a la siguiente. \\ \hline
+		Supuestos &
+		Los requisitos pueden definirse con suficiente claridad desde el inicio y se espera que permanezcan relativamente estables durante el desarrollo. \\ \hline
+		Condiciones de uso &
+		Es apropiado cuando existe poca incertidumbre, los cambios son limitados y se necesita una planificación y documentación detalladas desde las primeras etapas. \\ \hline
 	\end{tabularx}
 	
 	\subsection{Modelo iterativo e incremental}
 	
 	\begin{tabularx}{\textwidth}{|p{3.5cm}|Y|}
 		\hline
-		Fases & \\[1.3cm] \hline
-		Supuestos & \\[1.3cm] \hline
-		Condiciones de uso & \\[1.3cm] \hline
+		\textbf{Elemento} & \textbf{Descripción} \\ \hline
+		Fases &
+		El sistema se construye mediante iteraciones e incrementos. En cada ciclo se realizan actividades de análisis, diseño, implementación y pruebas, incorporando nuevas funcionalidades o mejorando las existentes. \\ \hline
+		Supuestos &
+		Los requisitos pueden evolucionar y no necesariamente se conocen por completo desde el inicio. Se considera posible entregar partes funcionales del sistema progresivamente. \\ \hline
+		Condiciones de uso &
+		Es adecuado cuando se necesita reducir la incertidumbre gradualmente, obtener resultados parciales y realizar ajustes entre ciclos de desarrollo. \\ \hline
 	\end{tabularx}
 	
 	\subsection{Modelo ágil}
 	
 	\begin{tabularx}{\textwidth}{|p{3.5cm}|Y|}
 		\hline
-		Fases & \\[1.3cm] \hline
-		Supuestos & \\[1.3cm] \hline
-		Condiciones de uso & \\[1.3cm] \hline
+		\textbf{Elemento} & \textbf{Descripción} \\ \hline
+		Fases &
+		El trabajo se organiza en ciclos cortos. Se priorizan requisitos, se planifica una iteración, se desarrolla y prueba un incremento, y se obtiene retroalimentación para ajustar el siguiente ciclo. \\ \hline
+		Supuestos &
+		Los requisitos pueden cambiar durante el proyecto y la participación frecuente de los interesados permite revisar prioridades y validar las funcionalidades desarrolladas. \\ \hline
+		Condiciones de uso &
+		Es apropiado cuando existe incertidumbre o alta volatilidad de requisitos, se necesita entregar valor rápidamente y los usuarios pueden participar de manera continua. \\ \hline
 	\end{tabularx}
 	
 	% ==================== 4 ====================
@@ -236,27 +243,53 @@
 	\begin{tabularx}{\textwidth}{|p{4.5cm}|Y|}
 		\hline
 		\textbf{Criterio} & \textbf{Qué significa} \\ \hline
-		K1. Estabilidad y gestión de cambios & \\ \hline
-		K2. Partes interesadas y su disponibilidad & \\ \hline
-		K3. Tipo de sistema y criticidad & \\ \hline
-		K4. Riesgo principal del proyecto & \\ \hline
-		K5. Documentación y marco normativo o contractual & \\ \hline
+		K1. Estabilidad y gestión de cambios &
+		Evalúa qué tan estables son los requisitos y la capacidad del modelo para incorporar cambios sin generar costos, retrasos o retrabajo excesivo. \\ \hline
+		K2. Partes interesadas y su disponibilidad &
+		Considera la participación de clientes, usuarios y responsables del proyecto durante el levantamiento, validación y modificación de los requisitos. \\ \hline
+		K3. Tipo de sistema y criticidad &
+		Analiza la naturaleza del sistema, sus consecuencias ante fallos y el nivel de control, validación y rigurosidad que requiere. \\ \hline
+		K4. Riesgo principal del proyecto &
+		Identifica la amenaza más importante para el cumplimiento de los objetivos, como cambios frecuentes, errores, retrasos, sobrecostos o falta de validación. \\ \hline
+		K5. Documentación y marco normativo o contractual &
+		Valora la necesidad de documentar requisitos, decisiones y pruebas, además de cumplir obligaciones legales, normativas o contractuales. \\ \hline
 	\end{tabularx}
+	
+	\textbf{Escala de valoración:} para las matrices comparativas se utiliza una escala de 1 a 5, donde 1 representa una adaptación muy baja del modelo al criterio y 5 representa una adaptación muy alta. Las puntuaciones corresponden a una valoración cualitativa del equipo según las características de cada escenario.
 	
 	% ==================== 5 ====================
 	
 	\section{Análisis de los cuatro escenarios}
 	
 	\subsection{Escenario 1. Extractora de aceite de palma}
+	
 	\datosclave
 	
 	\subsection{Escenario 2. Aplicación móvil de pedidos}
-	\datosclave
+	
+	\begin{tabularx}{\textwidth}{|p{4cm}|Y|}
+		\hline
+		\textbf{Dato clave} & \textbf{Detalle} \\ \hline
+		Equipo &
+		Pequeño equipo de desarrollo y propietario del negocio como responsable de validar las necesidades. \\ \hline
+		Plazo &
+		14 semanas para desarrollar y entregar la aplicación móvil. \\ \hline
+		Disponibilidad del cliente &
+		El propietario está disponible para participar, revisar avances y proporcionar retroalimentación. \\ \hline
+		Volatilidad esperada &
+		Alta, debido a que el propietario cambia frecuentemente sus ideas y prioridades sobre las funcionalidades. \\ \hline
+		Criticidad &
+		Media. La aplicación debe gestionar correctamente pedidos, pagos y entregas, aunque no corresponde a un sistema industrial de seguridad crítica. \\ \hline
+		Marco normativo o contractual &
+		Se deben considerar las obligaciones aplicables sobre protección de datos personales, privacidad y tratamiento de información relacionada con pedidos y pagos. \\ \hline
+	\end{tabularx}
 	
 	\subsection{Escenario 3. Sistema de trámites municipales}
+	
 	\datosclave
 	
 	\subsection{Escenario 4. Plataforma para cooperativa de cacao}
+	
 	\datosclave
 	
 	% ==================== 6 ====================
@@ -264,15 +297,54 @@
 	\section{Matrices comparativas}
 	
 	\subsection{Escenario 1}
+	
 	\matriz
 	
 	\subsection{Escenario 2}
-	\matriz
+	
+	\begin{center}
+		\textbf{Matriz comparativa del escenario 2: aplicación móvil de pedidos}
+	\end{center}
+	
+	\begin{tabularx}{\textwidth}{|p{2.6cm}|Y|Y|Y|}
+		\hline
+		\textbf{Criterio} &
+		\textbf{Secuencial (cascada)} &
+		\textbf{Iterativo e incremental} &
+		\textbf{Ágil} \\ \hline
+		
+		K1. Estabilidad y cambios &
+		\textbf{1/5}. Presenta baja adaptación porque los cambios frecuentes pueden provocar retrabajo y modificaciones importantes en etapas ya terminadas. &
+		\textbf{4/5}. Permite incorporar modificaciones entre iteraciones y ajustar progresivamente las funcionalidades. &
+		\textbf{5/5}. Facilita adaptar prioridades y requisitos mediante ciclos cortos y retroalimentación continua. \\ \hline
+		
+		K2. Partes interesadas y disponibilidad &
+		\textbf{2/5}. La participación se concentra principalmente en las etapas iniciales y en las revisiones establecidas. &
+		\textbf{4/5}. Permite consultar al propietario al finalizar cada incremento y considerar sus observaciones. &
+		\textbf{5/5}. Aprovecha la disponibilidad del propietario para validar continuamente las funcionalidades y prioridades. \\ \hline
+		
+		K3. Tipo de sistema y criticidad &
+		\textbf{3/5}. Puede desarrollar una aplicación de este tipo, pero su rigidez dificulta responder a cambios funcionales. &
+		\textbf{4/5}. Permite construir y probar progresivamente los módulos de pedidos, pagos y entregas. &
+		\textbf{5/5}. Facilita entregar primero las funciones esenciales y mejorar la aplicación según las necesidades del negocio. \\ \hline
+		
+		K4. Riesgo principal &
+		\textbf{2/5}. Existe riesgo de entregar una aplicación que no responda a las expectativas cambiantes del propietario. &
+		\textbf{4/5}. Reduce el riesgo mediante entregas parciales, aunque requiere controlar el alcance de cada incremento. &
+		\textbf{5/5}. Permite detectar diferencias entre lo solicitado y lo desarrollado mediante validaciones frecuentes. \\ \hline
+		
+		K5. Documentación y marco normativo o contractual &
+		\textbf{4/5}. Facilita establecer documentación y requisitos formales desde el inicio. &
+		\textbf{4/5}. Permite mantener documentación actualizada durante los incrementos del sistema. &
+		\textbf{3/5}. Prioriza el software funcional, por lo que se debe establecer expresamente la documentación y los controles de privacidad y seguridad necesarios. \\ \hline
+	\end{tabularx}
 	
 	\subsection{Escenario 3}
+	
 	\matriz
 	
 	\subsection{Escenario 4}
+	
 	\matriz
 	
 	% ==================== 7 ====================
@@ -280,15 +352,40 @@
 	\section{Justificación de los modelos seleccionados}
 	
 	\subsection{Escenario 1}
+	
 	\justificacion
 	
 	\subsection{Escenario 2}
-	\justificacion
+	
+	\begin{tabularx}{\textwidth}{|p{4.5cm}|Y|}
+		\hline
+		\textbf{Elemento} & \textbf{Respuesta} \\ \hline
+		
+		Modelo recomendado (puro o híbrido) &
+		Modelo ágil, con entregas incrementales y validación frecuente del propietario. \\ \hline
+		
+		Razón 1 (dato, criterio, consecuencia) &
+		La volatilidad de los requisitos es alta porque el propietario cambia frecuentemente sus ideas. El modelo ágil permite reorganizar las prioridades y adaptar las funcionalidades durante el desarrollo. \\ \hline
+		
+		Razón 2 &
+		El propietario está disponible para participar y revisar los avances. Esto facilita obtener retroalimentación frecuente y comprobar si las funcionalidades responden a las necesidades reales del negocio. \\ \hline
+		
+		Razón 3 &
+		El plazo de 14 semanas y el presupuesto reducido requieren priorizar las funcionalidades esenciales. El desarrollo ágil permite construir un producto mínimo viable (MVP) y entregar valor progresivamente. \\ \hline
+		
+		Por qué se descartan los otros dos modelos &
+		El modelo secuencial se descarta porque los cambios frecuentes pueden generar retrabajo, retrasos y costos adicionales. El modelo iterativo e incremental es una alternativa viable, pero el modelo ágil ofrece mayor flexibilidad para reorganizar prioridades y recibir retroalimentación continua. \\ \hline
+		
+		Tensión principal del escenario &
+		La principal tensión es equilibrar la flexibilidad para aceptar cambios con el presupuesto limitado y el plazo de 14 semanas. Para controlarla, se debe priorizar un MVP y evaluar el impacto de cada cambio antes de incorporarlo. \\ \hline
+	\end{tabularx}
 	
 	\subsection{Escenario 3}
+	
 	\justificacion
 	
 	\subsection{Escenario 4}
+	
 	\justificacion
 	
 	% ==================== 8 ====================
@@ -296,15 +393,32 @@
 	\section{Riesgos y mitigaciones}
 	
 	\subsection{Escenario 1}
+	
 	\riesgos
 	
 	\subsection{Escenario 2}
-	\riesgos
+	
+	\begin{tabularx}{\textwidth}{|p{1.5cm}|Y|Y|}
+		\hline
+		\textbf{N.º} &
+		\textbf{Riesgo del modelo elegido} &
+		\textbf{Mitigación} \\ \hline
+		
+		1 &
+		\textbf{Crecimiento descontrolado del alcance:} los cambios frecuentes y la incorporación constante de nuevas funcionalidades pueden provocar que el proyecto supere el presupuesto y el plazo de 14 semanas. &
+		Definir un producto mínimo viable, mantener una lista priorizada de requisitos y evaluar el impacto de cada cambio en el costo, el tiempo y el alcance antes de aprobarlo. \\ \hline
+		
+		2 &
+		\textbf{Errores en pedidos, pagos y entregas:} Las entregas rápidas y las modificaciones frecuentes pueden ocasionar fallos funcionales o problemas en el tratamiento de información personal. &
+		Realizar pruebas funcionales en cada iteración, establecer criterios de aceptación, validar los procesos de pedidos y pagos, y aplicar controles de privacidad y seguridad desde el diseño. \\ \hline
+	\end{tabularx}
 	
 	\subsection{Escenario 3}
+	
 	\riesgos
 	
 	\subsection{Escenario 4}
+	
 	\riesgos
 	
 	% ==================== 9 ====================
@@ -343,10 +457,6 @@
 	
 	\section{Conclusiones}
 	
-	\begin{itemize}
-		\item
-		\item
-		\item
-	\end{itemize}
+	% Escribir las conclusiones.
 	
 \end{document}
