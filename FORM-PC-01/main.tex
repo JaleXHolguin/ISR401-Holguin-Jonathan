@@ -1,0 +1,377 @@
+
+\documentclass[11pt,a4paper]{article}
+
+% ==================== PAQUETES ====================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[margin=2cm]{geometry}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage[table]{xcolor}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+
+% ==================== CONFIGURACIÓN ====================
+\definecolor{azulTabla}{RGB}{31,78,121}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=azulTabla,
+	citecolor=azulTabla,
+	urlcolor=azulTabla
+}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\setstretch{1.15}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\titleformat{\section}
+{\normalfont\Large\bfseries\color{azulTabla}}
+{\thesection.}{0.5em}{}
+
+\titleformat{\subsection}
+{\normalfont\large\bfseries}
+{\thesubsection}{0.5em}{}
+
+% ==================== PLANTILLAS REUTILIZABLES ====================
+
+\newcommand{\datosclave}{
+	\begin{tabularx}{\textwidth}{|p{4cm}|Y|}
+		\hline
+		\textbf{Dato clave} & \textbf{Detalle} \\ \hline
+		Equipo & \\ \hline
+		Plazo & \\ \hline
+		Disponibilidad del cliente & \\ \hline
+		Volatilidad esperada & \\ \hline
+		Criticidad & \\ \hline
+		Marco normativo o contractual & \\ \hline
+	\end{tabularx}
+}
+
+\newcommand{\matriz}{
+	\begin{tabularx}{\textwidth}{|p{2.6cm}|Y|Y|Y|}
+		\hline
+		\textbf{Criterio} &
+		\textbf{Secuencial (cascada)} &
+		\textbf{Iterativo e incremental} &
+		\textbf{Ágil} \\ \hline
+		
+		K1. Estabilidad y cambios & & & \\[2cm] \hline
+		K2. Partes interesadas y disponibilidad & & & \\[2cm] \hline
+		K3. Tipo de sistema y criticidad & & & \\[2cm] \hline
+		K4. Riesgo principal & & & \\[2cm] \hline
+		K5. Documentación y marco normativo o contractual & & & \\[2cm] \hline
+	\end{tabularx}
+}
+
+\newcommand{\justificacion}{
+	\begin{tabularx}{\textwidth}{|p{4.5cm}|Y|}
+		\hline
+		\textbf{Elemento} & \textbf{Respuesta} \\ \hline
+		Modelo recomendado (puro o híbrido) & \\[1.3cm] \hline
+		Razón 1 (dato, criterio, consecuencia) & \\[1.3cm] \hline
+		Razón 2 & \\[1.3cm] \hline
+		Razón 3 & \\[1.3cm] \hline
+		Por qué se descartan los otros dos modelos & \\[1.3cm] \hline
+		Tensión principal del escenario & \\[1.3cm] \hline
+	\end{tabularx}
+}
+
+\newcommand{\riesgos}{
+	\begin{tabularx}{\textwidth}{|p{1.5cm}|Y|Y|}
+		\hline
+		\textbf{N.º} & \textbf{Riesgo del modelo elegido} & \textbf{Mitigación} \\ \hline
+		1 & & \\[1.5cm] \hline
+		2 & & \\[1.5cm] \hline
+	\end{tabularx}
+}
+
+% ==================== DOCUMENTO ====================
+
+\begin{document}
+	
+	% ------------------------------------------------
+	% CARÁTULA
+	% ------------------------------------------------
+	
+	\begin{titlepage}
+		\centering
+		
+		{\large\textbf{UNIVERSIDAD TÉCNICA ESTATAL DE QUEVEDO}}\\[0.3cm]
+		
+		{\normalsize Facultad de Ciencias de la Ingeniería}\\[0.15cm]
+		{\normalsize Carrera de Ingeniería de Software}
+		
+		\vspace{1.5cm}
+		
+		{\color{azulTabla}\rule{0.85\textwidth}{1.5pt}}
+		
+		\vspace{1.2cm}
+		
+		{\large\textcolor{azulTabla}{\textbf{ACTIVIDAD ACADÉMICA}}}\\[0.5cm]
+		
+		{\Large\textbf{FORM-PC-01}}\\[0.8cm]
+		
+		{\LARGE\bfseries
+			Comparación de modelos\\[0.2cm]
+			de proceso de requisitos
+		}
+		
+		\vspace{1.2cm}
+		
+		{\color{azulTabla}\rule{0.85\textwidth}{1.5pt}}
+		
+		\vspace{0.8cm}
+		
+		\begin{minipage}{0.85\textwidth}
+			\renewcommand{\arraystretch}{1.7}
+			
+			\begin{tabular}{@{}>{\bfseries}p{3.2cm}p{9cm}@{}}
+				
+				Asignatura: &
+				Ingeniería de Requerimientos (ISR-401) \\
+				
+				Código: &
+				ISR-401 \\
+				
+				Docente: &
+				Gleiston Cicerón Guerrero Ulloa, PhD \\
+				
+				Integrantes: &
+				HOLGUIN MENDOZA JONATHAN ALEXANDER \\
+				
+				&
+				LAVAYEN BONE CRISTOPHER JAVIER \\
+				
+				&
+				MORAN PILAGUANO FRIXON FERNANDO \\
+				
+				&
+				SALTOS TELLO JOSEPH ORLANDO \\
+				
+				Paralelo: &
+				CUARTO SOFTWARE "B" \\
+				
+				Fecha de entrega: &
+				12/11/2026 \\
+				
+			\end{tabular}
+		\end{minipage}
+		
+		\vfill
+		
+		{\color{azulTabla}\rule{0.85\textwidth}{0.8pt}}\\[0.4cm]
+		
+		{\normalsize\textbf{QUEVEDO -- LOS RÍOS -- ECUADOR}}\\[0.15cm]
+		{\normalsize 2026}
+		
+	\end{titlepage}
+	
+	% ==================== 1 ====================
+	
+	\section{Introducción}
+	
+	% Escribir introducción.
+	
+	% ==================== 2 ====================
+	
+	\section{Objetivos}
+	
+	\subsection{Objetivo general}
+	
+	% Escribir objetivo general.
+	
+	\subsection{Objetivos específicos}
+	
+	\begin{itemize}
+		\item
+		\item
+		\item
+	\end{itemize}
+	
+	% ==================== 3 ====================
+	
+	\section{Descripción de los tres modelos de proceso}
+	
+	\subsection{Modelo secuencial (cascada)}
+	
+	\begin{tabularx}{\textwidth}{|p{3.5cm}|Y|}
+		\hline
+		Fases & \\[1.3cm] \hline
+		Supuestos & \\[1.3cm] \hline
+		Condiciones de uso & \\[1.3cm] \hline
+	\end{tabularx}
+	
+	\subsection{Modelo iterativo e incremental}
+	
+	\begin{tabularx}{\textwidth}{|p{3.5cm}|Y|}
+		\hline
+		Fases & \\[1.3cm] \hline
+		Supuestos & \\[1.3cm] \hline
+		Condiciones de uso & \\[1.3cm] \hline
+	\end{tabularx}
+	
+	\subsection{Modelo ágil}
+	
+	\begin{tabularx}{\textwidth}{|p{3.5cm}|Y|}
+		\hline
+		Fases & \\[1.3cm] \hline
+		Supuestos & \\[1.3cm] \hline
+		Condiciones de uso & \\[1.3cm] \hline
+	\end{tabularx}
+	
+	% ==================== 4 ====================
+	
+	\section{Criterios de comparación}
+	
+	\begin{tabularx}{\textwidth}{|p{4.5cm}|Y|}
+		\hline
+		\textbf{Criterio} & \textbf{Qué significa} \\ \hline
+		K1. Estabilidad y gestión de cambios & \\ \hline
+		K2. Partes interesadas y su disponibilidad & \\ \hline
+		K3. Tipo de sistema y criticidad & \\ \hline
+		K4. Riesgo principal del proyecto & \\ \hline
+		K5. Documentación y marco normativo o contractual & \\ \hline
+	\end{tabularx}
+	
+	% ==================== 5 ====================
+	
+	\section{Análisis de los cuatro escenarios}
+	
+	\subsection{Escenario 1. Extractora de aceite de palma}
+	\datosclave
+	
+	\subsection{Escenario 2. Aplicación móvil de pedidos}
+	\datosclave
+	
+	\subsection{Escenario 3. Sistema de trámites municipales}
+	\datosclave
+	
+	\subsection{Escenario 4. Plataforma para cooperativa de cacao}
+	\datosclave
+	
+	% ==================== 6 ====================
+	
+	\section{Matrices comparativas}
+	
+	\subsection{Escenario 1}
+	\matriz
+	
+	\subsection{Escenario 2}
+	\matriz
+	
+	\subsection{Escenario 3}
+	\matriz
+	
+	\subsection{Escenario 4}
+	\matriz
+	
+	% ==================== 7 ====================
+	
+	\section{Justificación de los modelos seleccionados}
+	
+	\subsection{Escenario 1}
+	\justificacion
+	
+	\subsection{Escenario 2}
+	\justificacion
+	
+	\subsection{Escenario 3}
+	\justificacion
+	
+	\subsection{Escenario 4}
+	\justificacion
+	
+	% ==================== 8 ====================
+	
+	\section{Riesgos y mitigaciones}
+	
+	\subsection{Escenario 1}
+	\riesgos
+	
+	\subsection{Escenario 2}
+	\riesgos
+	
+	\subsection{Escenario 3}
+	\riesgos
+	
+	\subsection{Escenario 4}
+	\riesgos
+	
+	% ==================== 9 ====================
+	
+	\section{Aplicación del framework de Pohl
+		(escenario elegido: \underline{\hspace{3cm}})}
+	
+	\subsection{Actores del proceso}
+	
+	\begin{tabularx}{\textwidth}{|Y|Y|Y|}
+		\hline
+		\textbf{Actor del escenario} &
+		\textbf{Rol en el proceso de requisitos} &
+		\textbf{Cuándo y cómo participa} \\ \hline
+		& & \\[1cm] \hline
+		& & \\[1cm] \hline
+		& & \\[1cm] \hline
+		& & \\[1cm] \hline
+		& & \\[1cm] \hline
+	\end{tabularx}
+	
+	\subsection{Actividades y artefactos por fase o iteración}
+	
+	\begin{tabularx}{\textwidth}{|p{2.4cm}|Y|Y|Y|}
+		\hline
+		\textbf{Fase o iteración} &
+		\textbf{Actividades centrales} &
+		\textbf{Actividades transversales} &
+		\textbf{Artefactos producidos} \\ \hline
+		& & & \\[2cm] \hline
+		& & & \\[2cm] \hline
+		& & & \\[2cm] \hline
+	\end{tabularx}
+	
+	% ==================== 10 ====================
+	
+	\section{Conclusiones}
+	
+	\begin{itemize}
+		\item
+		\item
+		\item
+	\end{itemize}
+	
+	% ==================== 11 ====================
+	
+	\section{Referencias bibliográficas}
+	
+	\begin{thebibliography}{99}
+		
+		\bibitem{ref1}
+		% Referencia bibliográfica 1.
+		
+		\bibitem{ref2}
+		% Referencia bibliográfica 2.
+		
+		\bibitem{ref3}
+		% Referencia bibliográfica 3.
+		
+	\end{thebibliography}
+	
+	% ==================== 12 ====================
+	
+	\appendix
+	
+	\section{Anexos}
+	
+	% Incluir anexos si son necesarios.
+	
+\end{document}
