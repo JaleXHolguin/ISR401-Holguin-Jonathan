@@ -179,7 +179,9 @@
 	
 	\section{Introducción}
 	
-	% Escribir introducción.
+	La ingeniería de requisitos constituye una fase fundamental en el ciclo de vida del desarrollo de software, ya que establece la base sobre la cual se conciben, estructuran y validan los sistemas. La elección de un modelo de proceso de requisitos —ya sea cascada, iterativo e incremental, o ágil— condiciona de manera directa la forma en que se descubren, documentan, acuerdan y gestionan los requerimientos a lo largo de un proyecto. Dicha selección no responde a preferencias arbitrarias, sino a un análisis riguroso de factores contextuales como la estabilidad de los requisitos, el tipo de sistema, la criticidad operativa y la disponibilidad de las partes interesadas [1--3]. 
+
+En este trabajo se examinan y comparan los tres modelos de proceso frente a cuatro escenarios reales y diversos, integrando referentes conceptuales y normativos de la disciplina como la norma ISO/IEC/IEEE 29148, la guía SWEBOK y el framework de ingeniería de requisitos de Klaus Pohl [1--3, 7]. Mediante este análisis, se busca comprender cómo equilibrar la flexibilidad y el rigor documental según las exigencias técnicas y contractuales de cada entorno de desarrollo.
 	
 	% ==================== 2 ====================
 	
@@ -187,11 +189,16 @@
 	
 	\subsection{Objetivo general}
 	
-	% Escribir objetivo general.
+	Comparar los modelos de proceso de requisitos en escenarios reales para aprender a elegir el más adecuado según el tipo de sistema, la estabilidad de los requisitos y la disponibilidad de las partes interesadas.
 	
 	\subsection{Objetivos específicos}
 	
-	% Escribir los objetivos específicos.
+	\begin{itemize}[noitemsep]
+	\item Caracterizar las familias de modelos de proceso de requisitos identificando sus fases, supuestos y condiciones de uso.
+	\item Evaluar el comportamiento de cada modelo mediante una matriz comparativa contextualizada a partir de criterios técnicos en cuatro escenarios reales.
+	\item Justificar la recomendación de un modelo de proceso para cada escenario, identificando sus riesgos específicos y respectivas estrategias de mitigación.
+	\item Describir los actores del proceso y ubicar las actividades centrales, transversales y artefactos del framework de Klaus Pohl en un escenario seleccionado.
+\end{itemize}
 	
 	% ==================== 3 ====================
 	
@@ -263,7 +270,23 @@
 	
 	\subsection{Escenario 1. Extractora de aceite de palma}
 	
-	\datosclave
+	
+	\begin{tabularx}{\textwidth}{|p{4cm}|Y|}
+	\hline
+	\textbf{Dato clave} & \textbf{Detalle} \\ \hline
+	Equipo &
+	4 personas (2 de software embebido, 1 analista de requisitos y 1 encargado de pruebas). \\ \hline
+	Plazo &
+	10 meses, con puesta en marcha obligatoria antes de la próxima temporada alta. \\ \hline
+	Disponibilidad del cliente &
+	Baja a media: el jefe de planta solo puede reunirse dos mañanas por semana; los operadores trabajan en turnos rotativos. \\ \hline
+	Cambios esperados &
+	Baja volatilidad en funciones de seguridad, alta volatilidad en la interfaz del operador, reportes y la comunicación con sensores aún no comprados. \\ \hline
+	Criticidad &
+	Muy alta: involucra la seguridad física de los operadores (riesgo de quemaduras y presión residual), prevención de desbordes de tanques y control de pérdidas de producción. \\ \hline
+	Marco normativo o contractual &
+	Exigencias estrictas de la aseguradora de requisitos de seguridad aprobados y pruebas documentadas obligatorias antes de operar y especificaciones técnicas fijadas por el fabricante de los esterilizadores. \\ \hline
+\end{tabularx}
 	
 	\subsection{Escenario 2. Aplicación móvil de pedidos}
 	
@@ -341,7 +364,40 @@
 	
 	\subsection{Escenario 1. Extractora de aceite de palma}
 	
-	\matriz
+	\begin{longtable}{|p{2.6cm}|*{3}{>{\raggedright\arraybackslash}p{\dimexpr(\textwidth-2.6cm-8\tabcolsep-5\arrayrulewidth)/3\relax}|}}
+	\hline
+	\textbf{Criterio} &
+	\textbf{Secuencial (cascada)} &
+	\textbf{Iterativo e incremental} &
+	\textbf{Ágil} \\ \hline
+	\endfirsthead
+	\hline
+	\textbf{Criterio} &
+	\textbf{Secuencial (cascada)} &
+	\textbf{Iterativo e incremental} &
+	\textbf{Ágil} \\ \hline
+	\endhead
+	K1. Estabilidad y cambios &
+	\textbf{4/5.} Las funciones de seguridad y las reglas del fabricante son estables y no cambiarán. Sin embargo, los sensores aún no se compran y la interfaz del operador es incierta, lo que obligaría a aplicar un control estricto de cambios sobre la línea base. &
+	\textbf{3/5.} Permite estabilizar primero las funciones críticas de seguridad y dejar para ciclos posteriores la interfaz o los reportes, aunque la falta de definición de los sensores complica la planificación por incrementos fijos. &
+	\textbf{2/5.} La alta volatilidad de la interfaz y la integración de sensores no comprados choca con la baja disponibilidad del jefe de planta (dos mañanas por semana), dificultando la priorización continua de un marco puramente ágil. \\ \hline
+	K2. Partes interesadas y disponibilidad &
+	\textbf{3/5.} Requiere reuniones intensas al inicio para congelar las funciones de seguridad con el jefe de planta y el responsable de seguridad industrial, encajando bien con su disponibilidad limitada de dos mañanas por semana. &
+	\textbf{3/5.} Exige revisiones coordinadas al cierre de cada ciclo. La disponibilidad intermitente del jefe de planta y los turnos rotativos de los operadores dificultan validaciones frecuentes sin una planificación formal previa. &
+	\textbf{1/5.} Es sumamente difícil de aplicar porque exige una participación constante y fluida del cliente, la cual no existe debido a que el jefe de planta solo atiende dos mañanas semanales y los operadores laboran por turnos. \\ \hline
+	K3. Tipo de sistema y criticidad &
+	\textbf{5/5.} Sistema embebido industrial de criticidad muy alta (riesgo de quemaduras por presión y desbordes). La rigurosidad del modelo en la especificación formal y la verificación exhaustiva responde perfectamente a la exigencia de la aseguradora. &
+	\textbf{4/5.} Permite segregar los componentes críticos de seguridad y desarrollarlos bajo controles estrictos, incorporando los incrementos de la interfaz de forma controlada y validando cada parte antes de la puesta en marcha. &
+	\textbf{2/5.} Evaluar componentes críticos de seguridad industrial (presión de vapor y bloqueos de compuertas) mediante ciclos cortos informales incrementa el riesgo de omisiones normativas exigidas por la aseguradora. \\ \hline
+	K4. Riesgo principal &
+	\textbf{3/5.} El mayor riesgo es descubrir tarde problemas en la interfaz o incompatibilidades con los sensores no comprados, lo que implicaría costos altos de rediseño tras aprobar la línea base inicial. &
+	\textbf{4/5.} Mitiga el riesgo de integración por fases, permitiendo probar partes funcionales del controlador de forma progresiva antes de la temporada alta de los 10 meses de plazo. &
+	\textbf{3/5.} El riesgo principal es descuidar los requisitos no funcionales críticos (memoria limitada, red local sin internet) y la documentación obligatoria exigida por la póliza de seguros de la extractora. \\ \hline
+	K5. Documentación y marco normativo o contractual &
+	\textbf{5/5.} Se alinea totalmente con las exigencias de la aseguradora, que demanda un documento de requisitos de seguridad rigurosamente aprobado y evidencias documentadas de pruebas de cada función de protección antes de la puesta en marcha. &
+	\textbf{4/5.} Permite generar la documentación y las evidencias de prueba de forma progresiva conforme se cierran los incrementos de seguridad y control de tanques exigidos por la normativa de la planta. &
+	\textbf{2/5.} Tiende a minimizar la documentación formal, lo cual choca frontalmente con la exigencia jurídica y contractual de la aseguradora de contar con manuales y especificaciones técnicas aprobadas de antemano. \\ \hline
+\end{longtable}
 	
 	\subsection{Escenario 2. Aplicación móvil de pedidos}
 	
@@ -503,7 +559,28 @@
 	
 	\subsection{Escenario 1. Extractora de aceite de palma}
 	
-	\justificacion
+	\begin{tabularx}{\textwidth}{|p{4.5cm}|Y|}
+	\hline
+	\textbf{Elemento} & \textbf{Respuesta} \\ \hline
+	
+	Modelo recomendado (puro o híbrido) &
+	Modelo híbrido: Enfoque secuencial (cascada) estricto para los componentes críticos de seguridad y el control de esterilizadores (regulados por el fabricante y exigidos por la aseguradora), combinado con un enfoque iterativo e incremental para la interfaz del operador, reportes y la integración de los sensores pendientes de compra. \\ \hline
+	
+	Razón 1 (dato, criterio, consecuencia) &
+	Las reglas de seguridad de los esterilizadores están definidas por el fabricante y la aseguradora exige requisitos de seguridad aprobados de antemano (dato); esto corresponde a la criticidad y marco normativo (K3, K5), lo que hace indispensable una especificación inicial formal y congelada para evitar riesgos físicos graves en la planta. \\ \hline
+	
+	Razón 2 &
+	El jefe de planta solo puede reunirse dos mañanas por semana y los operadores trabajan en turnos rotativos (dato); esto afecta directamente la disponibilidad de las partes interesadas (K2), imposibilitando un modelo ágil que exige validaciones y retroalimentación continua. \\ \hline
+	
+	Razón 3 &
+	El proveedor de los sensores y válvulas no ha sido elegido y se comprará en el tercer mes, además de existir alta volatilidad en los reportes (dato); esto impacta la estabilidad y gestión de cambios (K1), justificando bloques iterativos posteriores para integrar dichos dispositivos sin alterar la base de seguridad. \\ \hline
+	
+	Por qué se descartan los otros dos modelos &
+	El modelo ágil puro se descarta por completo debido a la baja disponibilidad del cliente, la alta criticidad física de la planta y la exigencia estricta de documentación formal de la aseguradora. El modelo secuencial puro se descarta porque es incapaz de absorber la incertidumbre de los sensores que aún no se compran ni los cambios en la interfaz de pantalla del operador. \\ \hline
+	
+	Tensión principal del escenario &
+	La tensión principal radica en que el sistema combina una parte industrial de seguridad crítica muy estricta (que exige cascada y documentación de aseguradora) con una parte de gestión incierta (sensores no comprados y pantallas por definir, que exigirían flexibilidad). Se resuelve mediante el enfoque híbrido propuesto. \\ \hline
+\end{tabularx}
 	
 	\subsection{Escenario 2. Aplicación móvil de pedidos}
 	
