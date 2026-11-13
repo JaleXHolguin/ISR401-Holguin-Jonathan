@@ -686,7 +686,35 @@ En este trabajo se examinan y comparan los tres modelos de proceso frente a cuat
 	
 	\subsection{Escenario 1. Extractora de aceite de palma}
 	
-	\riesgos
+	\begin{tabularx}{\textwidth}{|p{1.5cm}|Y|Y|}
+	\hline
+	\textbf{N.º} & \textbf{Riesgo del modelo elegido} & \textbf{Mitigación} \\ \hline
+	
+	1 &
+	\textbf{Incompatibilidad técnica con los nuevos sensores:} Dado que el proveedor de válvulas y sensores se definirá en el tercer mes, las decisiones iniciales de diseño en cascada podrían entrar en conflicto con los protocolos del hardware adquirido posteriormente, retrasando el plazo límite de los 10 meses. &
+	Definir una capa de abstracción de hardware (firmware modular) durante el análisis inicial que independice la lógica de control principal de las especificaciones físicas específicas del sensor que se elija en el tercer mes. \\ \hline
+	
+	2 &
+	\textbf{Incumplimiento de las exigencias documentales de la aseguradora:} Si la documentación formal de los requisitos de seguridad y las evidencias de pruebas no se estructuran rigurosamente de acuerdo con las políticas de la póliza antes de la puesta en marcha, la aseguradora podría invalidar el funcionamiento del sistema. &
+	Establecer revisiones formales obligatorias de trazabilidad y actas de validación de seguridad con el responsable industrial y la aseguradora al concluir la fase de especificación y en cada incremento crítico antes de implementarlo en la red local. \\ \hline
+\end{tabularx}
+	
+	\subsection{Escenario 2. Aplicación móvil de pedidos}
+	
+	\begin{tabularx}{\textwidth}{|p{1.5cm}|Y|Y|}
+		\hline
+		\textbf{N.º} &
+		\textbf{Riesgo del modelo elegido} &
+		\textbf{Mitigación} \\ \hline
+		
+		1 &
+		\textbf{Crecimiento descontrolado del alcance:} los cambios frecuentes y la incorporación constante de nuevas funcionalidades pueden provocar que el proyecto supere el presupuesto y el plazo de 14 semanas. &
+		Definir un producto mínimo viable, mantener una lista priorizada de requisitos y evaluar el impacto de cada cambio en el costo, el tiempo y el alcance antes de aprobarlo. \\ \hline
+		
+		2 &
+		\textbf{Errores en pedidos, pagos y entregas:} Las entregas rápidas y las modificaciones frecuentes pueden ocasionar fallos funcionales o problemas en el tratamiento de información personal. &
+		Realizar pruebas funcionales en cada iteración, establecer criterios de aceptación, validar los procesos de pedidos y pagos, y aplicar controles de privacidad y seguridad desde el diseño. \\ \hline
+	\end{tabularx}
 	
 	\subsection{Escenario 2. Aplicación móvil de pedidos}
 	
