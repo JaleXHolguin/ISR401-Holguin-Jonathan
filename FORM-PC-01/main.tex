@@ -732,7 +732,27 @@ La elección de un modelo de proceso de requisitos —secuencial, iterativo o á
 	
 	\subsection{Escenario 3. Sistema de trámites municipales}
 	
-	\riesgos
+	\begin{tabularx}{\textwidth}{|p{1.5cm}|Y|Y|}
+		\hline
+		\textbf{N.º} & \textbf{Riesgo del modelo elegido} & \textbf{Mitigación} \\ \hline
+		1 &
+		\textbf{Descubrir tarde problemas con la base de datos.} Si los primeros
+		avances se centran en las pantallas y dejan para después la lectura de la
+		base de datos de los predios, el equipo podría descubrir cerca del mes 6 que
+		el sistema no puede consultar los datos que necesita. &
+		Dedicar parte del primer ciclo a probar la lectura de la base desde los
+		servidores municipales. Registrar qué datos se pueden consultar y resolver
+		los problemas de acceso antes de construir los trámites que dependen de
+		ellos. \\ \hline
+		2 &
+		\textbf{Acumular avances sin revisión de los usuarios.} Si el administrador
+		no logra convocar a los técnicos o a la jefa de rentas al cierre de un
+		ciclo, el equipo podría seguir construyendo sobre pasos que aún no se han
+		revisado. Corregirlos después puede retrasar la entrega. &
+		Acordar en la reunión semanal qué parte se va a revisar, quién debe
+		participar y en qué fecha. Si la revisión se aplaza, anotar las dudas y
+		avanzar con tareas que no dependan de esas decisiones. \\ \hline
+	\end{tabularx}
 	
 	\subsection{Escenario 4. Plataforma para cooperativa de cacao}
 	
