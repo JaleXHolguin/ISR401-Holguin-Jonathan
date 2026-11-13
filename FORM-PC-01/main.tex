@@ -532,7 +532,49 @@
 	
 	\subsection{Escenario 3. Sistema de trámites municipales}
 	
-	\justificacion
+	\begin{tabularx}{\textwidth}{|p{4.5cm}|Y|}
+		\hline
+		\textbf{Elemento} & \textbf{Respuesta} \\ \hline
+		Modelo recomendado &
+		\textbf{Iterativo e incremental.} El sistema se desarrolla y se prueba por
+		partes, con revisiones al final de cada ciclo. Los avances se organizan
+		alrededor de las entregas del contrato: requisitos aprobados en el mes 2,
+		sistema instalado y probado en el mes 6, y capacitación con el acta de entrega
+		en el mes 7. \\ \hline
+
+		Razón 1. Cambios en los requisitos (K1) &
+		La aprobación de patentes ya cambió dos veces y las tasas podrían cambiar en
+		el mes 4. Revisar los trámites por partes permite ajustar el paso o el cálculo
+		afectado. Si el cambio de alcance aumenta el costo, se tramita su aprobación
+		antes de incorporarlo. \\ \hline
+
+		Razón 2. Disponibilidad de los usuarios (K2) &
+		El administrador se reúne con el equipo una vez por semana. En esas reuniones
+		se pueden acordar las revisiones de cada avance y pedir que convoque a la jefa
+		de rentas o a los técnicos cuando haga falta revisar un trámite. \\ \hline
+
+		Razón 3. Riesgo de la base de datos (K4) &
+		La base de datos de los predios es antigua y carece de documentación. Uno de
+		los primeros avances puede comprobar si el sistema logra leerla desde los
+		servidores municipales. Detectar un problema en esa etapa deja más margen para
+		resolverlo antes de la entrega del mes 6. \\ \hline
+
+		Por qué se descartan los otros modelos &
+		\textbf{Secuencial.} Sus fases encajan con las fechas del contrato, pero una
+		ordenanza aprobada en el mes 4 podría obligar a revisar los requisitos
+		acordados en el mes 2 y a rehacer parte del sistema. \par \textbf{Ágil.} Los
+		ciclos cortos ayudan a ajustar prioridades, pero los usuarios participan solo
+		cuando los convoca el administrador. Esa disponibilidad limita la revisión
+		frecuente y el contrato exige un trámite formal si un cambio de alcance
+		aumenta el costo. \\ \hline
+
+		Tensión principal del escenario &
+		Los pagos, las fechas fijas y las multas por retraso favorecen un trabajo por
+		fases. Al mismo tiempo, los pasos de aprobación y las tasas pueden cambiar
+		después de aprobar los requisitos. La propuesta mantiene las fechas del
+		contrato y usa los ciclos para probar cada parte y revisar los cambios que
+		surjan. \\ \hline
+	\end{tabularx}
 	
 	\subsection{Escenario 4. Plataforma para cooperativa de cacao}
 	
