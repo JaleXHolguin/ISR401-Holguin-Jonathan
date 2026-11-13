@@ -532,11 +532,76 @@
 	
 	\subsection{Escenario 3. Sistema de trámites municipales}
 	
-	\justificacion
+	\begin{tabularx}{\textwidth}{|p{4.5cm}|Y|}
+		\hline
+		\textbf{Elemento} & \textbf{Respuesta} \\ \hline
+		Modelo recomendado &
+		\textbf{Iterativo e incremental.} El sistema se desarrolla y se prueba por
+		partes, con revisiones al final de cada ciclo. Los avances se organizan
+		alrededor de las entregas del contrato: requisitos aprobados en el mes 2,
+		sistema instalado y probado en el mes 6, y capacitación con el acta de entrega
+		en el mes 7. \\ \hline
+
+		Razón 1. Cambios en los requisitos (K1) &
+		La aprobación de patentes ya cambió dos veces y las tasas podrían cambiar en
+		el mes 4. Revisar los trámites por partes permite ajustar el paso o el cálculo
+		afectado. Si el cambio de alcance aumenta el costo, se tramita su aprobación
+		antes de incorporarlo. \\ \hline
+
+		Razón 2. Disponibilidad de los usuarios (K2) &
+		El administrador se reúne con el equipo una vez por semana. En esas reuniones
+		se pueden acordar las revisiones de cada avance y pedir que convoque a la jefa
+		de rentas o a los técnicos cuando haga falta revisar un trámite. \\ \hline
+
+		Razón 3. Riesgo de la base de datos (K4) &
+		La base de datos de los predios es antigua y carece de documentación. Uno de
+		los primeros avances puede comprobar si el sistema logra leerla desde los
+		servidores municipales. Detectar un problema en esa etapa deja más margen para
+		resolverlo antes de la entrega del mes 6. \\ \hline
+
+		Por qué se descartan los otros modelos &
+		\textbf{Secuencial.} Sus fases encajan con las fechas del contrato, pero una
+		ordenanza aprobada en el mes 4 podría obligar a revisar los requisitos
+		acordados en el mes 2 y a rehacer parte del sistema. \par \textbf{Ágil.} Los
+		ciclos cortos ayudan a ajustar prioridades, pero los usuarios participan solo
+		cuando los convoca el administrador. Esa disponibilidad limita la revisión
+		frecuente y el contrato exige un trámite formal si un cambio de alcance
+		aumenta el costo. \\ \hline
+
+		Tensión principal del escenario &
+		Los pagos, las fechas fijas y las multas por retraso favorecen un trabajo por
+		fases. Al mismo tiempo, los pasos de aprobación y las tasas pueden cambiar
+		después de aprobar los requisitos. La propuesta mantiene las fechas del
+		contrato y usa los ciclos para probar cada parte y revisar los cambios que
+		surjan. \\ \hline
+	\end{tabularx}
 	
 	\subsection{Escenario 4. Plataforma para cooperativa de cacao}
 	
-	\justificacion
+	\small
+	\begin{tabularx}{\textwidth}{|p{4.5cm}|Y|}
+		\hline
+		\textbf{Elemento} & \textbf{Respuesta} \\ \hline
+		
+		Modelo recomendado (puro o híbrido) &
+		Híbrido con base iterativa e incremental. El núcleo estable (entregas, liquidaciones, saldos de crédito, avisos) se especifica y la directiva lo aprueba en los primeros meses como línea base. La trazabilidad y certificación de los compradores y el registro sin conexión se construyen en iteraciones, con una revisión al terminar cada una. \\ \hline
+		
+		Razón 1 (dato, criterio, consecuencia) &
+		Dato: las reglas de liquidación constan en el estatuto y no cambian (K1). Consecuencia: pueden escribirse y aprobarse al inicio sin temor a que queden obsoletas, y solo el módulo de trazabilidad necesita ciclos. \\ \hline
+		
+		Razón 2 &
+		Dato: el donante exige un informe cada seis meses con funciones terminadas (K5). Consecuencia: el plan debe producir incrementos verificables en cada semestre; una única entrega final dejaría los informes sin respaldo. \\ \hline
+		
+		Razón 3 &
+		Dato: la gerente atiende casi a diario pero no decide sola, la directiva sesiona una vez al mes y los socios solo aparecen en acopio y asambleas (K2). Consecuencia: no hay quien priorice cada semana, pero sí hay momentos fijos de revisión a los que atar el cierre de cada ciclo. \\ \hline
+		
+		Por qué se descartan los otros dos modelos &
+		Cascada pura: los compradores cambian la trazabilidad cada temporada y una sola entrega final no permite informar al donante a los seis meses. Ágil puro: falta un representante con autoridad para priorizar, y la documentación mínima se queda corta en un sistema que maneja dinero y datos personales. \\ \hline
+		
+		Tensión principal del escenario &
+		La gerente, disponible casi todos los días, y los cambios frecuentes de la trazabilidad empujan hacia un modelo ágil. Frenan ese camino la directiva mensual, la criticidad alta y las reglas fijas del estatuto. \\ \hline
+	\end{tabularx}
+	\normalsize
 	
 	% ==================== 8 ====================
 	
@@ -569,7 +634,26 @@
 	
 	\subsection{Escenario 4. Plataforma para cooperativa de cacao}
 	
-	\riesgos
+	\small
+	\begin{tabularx}{\textwidth}{|p{1.5cm}|Y|Y|}
+		\hline
+		\textbf{N.º} &
+		\textbf{Riesgo del modelo elegido} &
+		\textbf{Mitigación} \\ \hline
+		
+		1 &
+		Los incrementos quedan mal repartidos y el módulo sin conexión no encaja con el núcleo del sistema. &
+		Fijar en la primera iteración qué entra en cada incremento y con qué criterios se acepta, y probar la sincronización en cada ciclo. \\ \hline
+		
+		2 &
+		Las decisiones se retrasan: la directiva solo se reúne cada mes y la gerente no decide sola. &
+		Hacer coincidir el cierre de cada ciclo con la reunión mensual y pactar con la directiva qué cambios menores puede aprobar la gerente. \\ \hline
+		
+		3 &
+		Los socios, con poca experiencia tecnológica, no validan las funciones a tiempo. &
+		Llevar prototipos simples a los días de acopio y recoger su opinión antes de cada entrega semestral. \\ \hline
+	\end{tabularx}
+	\normalsize
 	
 	% ==================== 9 ====================
 	
