@@ -324,7 +324,16 @@
 
 	\subsection{Escenario 4. Plataforma para cooperativa de cacao}
 	
-	\datosclave
+	\begin{tabularx}{\textwidth}{|p{4cm}|Y|}
+		\hline
+		\textbf{Dato clave} & \textbf{Detalle} \\ \hline
+		Equipo & 4 personas. \\ \hline
+		Plazo & 12 meses, con un informe de avance al donante cada semestre. \\ \hline
+		Disponibilidad del cliente & Mixta. La gerente atiende casi a diario, pero no decide sola; la directiva se reúne una vez al mes; los 640 socios solo están disponibles los días de acopio y en las asambleas trimestrales. \\ \hline
+		Cambios esperados & Bajos en las reglas de liquidación, fijadas en el estatuto. Altos en la trazabilidad y la certificación del cacao, que los compradores modifican cada temporada. \\ \hline
+		Criticidad & Alta: maneja el dinero y los créditos de los socios, y sus datos personales. \\ \hline
+		Marco normativo o contractual & Estatuto de la cooperativa, control del organismo que supervisa la economía popular y solidaria, condiciones del donante y normativa de protección de datos personales. \\ \hline
+	\end{tabularx}
 	
 	% ==================== 6 ====================
 	
@@ -446,9 +455,47 @@
 		aumenta el costo, el equipo debe esperar el trámite formal. \\ \hline
 	\end{longtable}
 	
+	\clearpage
 	\subsection{Escenario 4. Plataforma para cooperativa de cacao}
 	
-	\matriz
+	\begin{center}
+		\textbf{Matriz comparativa del escenario 4: plataforma para cooperativa de cacao}
+	\end{center}
+	
+	\small
+	\begin{tabularx}{\textwidth}{|p{2.2cm}|Y|Y|Y|}
+		\hline
+		\textbf{Criterio} &
+		\textbf{Secuencial (cascada)} &
+		\textbf{Iterativo e incremental} &
+		\textbf{Ágil} \\ \hline
+		
+		K1. Estabilidad y cambios &
+		\textbf{2/5}. Las liquidaciones salen del estatuto y casi no cambian, así que se pueden fijar al inicio. Las exigencias de trazabilidad y certificación que los compradores modifican cada temporada sí cambian, y cada ajuste pasaría por control formal sobre la línea base. &
+		\textbf{4/5}. Se acuerda una base con liquidaciones, entregas y saldos. Lo que pidan los compradores en cada temporada entra como trabajo de un ciclo posterior, sin tocar lo ya entregado. &
+		\textbf{4/5}. Reordenar una lista priorizada en cada ciclo ayuda con la trazabilidad, pero las liquidaciones, que el estatuto mantiene fijas, no tienen cambios que absorber. \\ \hline
+		
+		K2. Partes interesadas y disponibilidad &
+		\textbf{3/5}. La gerente (casi a diario) y la directiva (una vez al mes) alcanzan para aprobar cada fase. Los socios, que hoy no entienden cómo se calcula su pago, solo verían el sistema ya terminado. &
+		\textbf{4/5}. Cada ciclo puede cerrar con una revisión en la reunión mensual de la directiva y con una prueba en un día de acopio, que son los momentos en que hay gente disponible. &
+		\textbf{2/5}. Requiere a alguien con autoridad para priorizar en cada ciclo. La gerente no decide sola y la directiva solo se reúne cada mes, de modo que las prioridades esperarían semanas. \\ \hline
+		
+		K3. Tipo de sistema y criticidad &
+		\textbf{3/5}. Un error en el dinero o en el crédito de un socio es grave, y detallar todo antes de construir reduce ese riesgo. El registro de entregas sin conexión en el centro de Mocache, en cambio, solo se comprobaría al final. &
+		\textbf{4/5}. Lo crítico (entregas, liquidaciones, saldos) se construye y verifica primero. El registro sin conexión con su sincronización puede probarse en el centro de acopio desde los primeros ciclos. &
+		\textbf{2/5}. Los ciclos cortos con poca documentación son riesgosos cuando se maneja dinero de los socios. Los requisitos de seguridad, de datos personales y de uso sin conexión suelen quedar sin escribir. \\ \hline
+		
+		K4. Riesgo principal &
+		\textbf{2/5}. Que lo especificado al comienzo no coincida con lo que pidan los compradores en la próxima temporada, o que resulte difícil de usar para socios con poca experiencia en tecnología. &
+		\textbf{4/5}. Repartir mal el alcance entre incrementos y tropezar al unir el módulo sin conexión con el resto del sistema. &
+		\textbf{2/5}. Quedarse sin un cliente que decida y sin manera de consultar seguido a los socios, que viven en recintos lejanos. \\ \hline
+		
+		K5. Documentación y marco normativo o contractual &
+		\textbf{3/5}. El estatuto y el control del organismo supervisor se atienden bien con una especificación aprobada. El donante pide funciones terminadas cada semestre, y con una sola entrega final no habría nada que mostrarle a mitad del proyecto. &
+		\textbf{4/5}. La especificación crece por versiones y cada semestre sale un incremento terminado con su documentación, que es lo que puede reportarse al donante. &
+		\textbf{3/5}. Las historias de usuario y los criterios de aceptación bastan para el equipo, pero quizá no alcancen para rendir cuentas del dinero de los socios ni para demostrar el cumplimiento de la normativa de datos personales. \\ \hline
+	\end{tabularx}
+	\normalsize
 	
 	% ==================== 7 ====================
 	
