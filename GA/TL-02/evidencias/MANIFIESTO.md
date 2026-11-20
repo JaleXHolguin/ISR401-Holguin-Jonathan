@@ -24,13 +24,17 @@ El audio se almacena en Drive y debe mantenerse con acceso restringido. Este rep
 | Tamaño | 7 450 906 bytes |
 | Algoritmo de verificación | SHA-256 |
 | Huella SHA-256 | `5AF52C6F575D6702070A815A76CD870FDF87BC796D5F9084914D28A8DED9DED4` |
-| Consentimiento | Se solicitó verbalmente antes de iniciar la entrevista mediante la pregunta reproducida a continuación. |
+| Consentimiento | Se solicitó y obtuvo verbalmente antes de iniciar la entrevista, según el fragmento transcrito a continuación. |
 
 ## Solicitud de consentimiento
 
 Antes de la entrevista se formuló la siguiente solicitud:
 
 > Puedes omitir cualquier pregunta o detener la entrevista cuando quieras. Si das algún ejemplo, evita mencionar nombres o datos que identifiquen a otras personas. ¿Estás de acuerdo en participar y en que grabemos únicamente el audio?
+
+El participante respondió:
+
+> Sí, sí, eh no hay ningún problema. Pueden grabar tranquilos.
 
 ## Verificación del archivo
 
